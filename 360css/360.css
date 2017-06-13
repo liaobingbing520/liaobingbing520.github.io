@@ -1,0 +1,310 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.dowebok{}
+.section{
+   overflow: hidden;
+}
+/*第一屏*/
+ .one .logo{
+    display: block;
+    width: 251px;
+    height: 186px;
+    background:url("../images/logo.png");
+    margin: 80px auto 0;
+}
+.one .text_img{
+    width: 100%;
+    height: 93px;
+    text-align: center;
+    margin-top:70px;
+}
+.one .text_img>img{
+    width: 69px;
+    height: 93px;
+    margin: 0 50px;
+    opacity: 0.2;
+    transition:margin 1s,opacity 1s;
+}
+ .one .info_1{
+     width: 772px;
+     height: 49px;
+     background:url("../images/info_1.png");
+     margin: 50px auto;
+ }
+ /*第一屏特效*/
+.one.current .text_img>img{
+    margin: 0 10px;
+    opacity: 1;
+}
+/*第二屏*/
+.two{
+    position: relative;
+}
+.two .shield{
+    font-size: 0;
+    width: 440px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-140%,-50%);
+}
+.two .info_2{
+    width: 635px;
+    height: 390px;
+    background:url("../images/info_2.png");
+    position: absolute;
+    right:50%;
+    top:50%;
+    transform:translate(100%,-50%);
+}
+/*特效*/
+.two .shield>img{
+    transition:transform 1s;
+}
+.two .shield>img:nth-of-type(1){
+    transform:translate(100px,-100px) rotate(100deg);
+}
+.two .shield>img:nth-of-type(2){
+    transform:translate(100px,200px) rotate(110deg);
+}
+.two .shield>img:nth-of-type(3){
+    transform:translate(-170px,100px) rotate(120deg);
+}
+.two .shield>img:nth-of-type(4){
+    transform:translate(150px,200px) rotate(140deg);
+}
+.two .shield>img:nth-of-type(5){
+    transform: translate(200px,230px) rotate(200deg);
+}
+.two .shield>img:nth-of-type(6){
+    transform:translate(-200px,230px) rotate(250deg);
+}
+.two .shield>img:nth-of-type(7){
+    transform:translate(100px,-240px) rotate(270deg);
+}
+.two .shield>img:nth-of-type(8){
+    transform:translate(100px,-290px) rotate(310deg);
+}
+.two .shield>img:nth-of-type(9){
+    transform:translate(160px,-250px) rotate(330deg);
+}
+.two.current .shield>img{
+    transform:none;
+}
+/*第三屏*/
+.three{
+    position: relative;
+}
+.three .info_3{
+    width: 631px;
+    height: 278px;
+    position:absolute;
+    background:url("../images/info_3.png");
+    left:50%;
+    top:50%;
+    transform:translate(-100%,-50%)
+}
+.three .circle{
+    width: 453px;
+    height: 449px;
+    position: absolute;
+    background:url("../images/circle.png");
+    right: 50%;
+    top:50%;
+    transform:translate(120%,-50%);
+}
+.three .circle>.rocket{
+    width: 203px;
+    height: 204px;
+    background:url("../images/rocket.png");
+    position: absolute;
+    left:-560px;
+    top:600px;
+    transition:left 1s,top 1s;
+}
+/*特效*/
+.three.current .circle>.rocket{
+    left:120px;
+    top:118px;
+}
+/*第四屏*/
+.four{
+    position: relative;
+}
+.four .four_left{
+    overflow: hidden;
+    position: absolute;
+    width: 529px;
+    height: 438px;
+    left:50%;
+    top:50%;
+    transform:translate(-120%,-50%);
+}
+.four .info_4{
+    position: absolute;
+    width: 612px;
+    height: 299px;
+    background:url("../images/info_4.png");
+    right:50%;
+    top:50%;
+    transform:translate(100%,-50%);
+}
+.four .four_left .search{
+    position: absolute;
+    width: 529px;
+    height: 66px;
+    background:url("../images/search.png");
+    left:-530px;
+    top:0;
+    transition:left 1s;
+}
+.four .four_left .key{
+    width: 0px;
+    height: 22px;
+    position: absolute;
+    background:url("../images/key.png");
+    left:20px;
+    top:22px;
+    transition:width 1.5s 1s steps(5);
+}
+.four .four_left .result{
+    width: 529px;
+    height: 0px;
+    background:url("../images/result.png");
+    position: absolute;
+    left:0;
+    top:50px;
+    transition:height 1.5s 2.5s;
+}
+/*特效*/
+.four.current .four_left>.search{
+    left:0;
+}
+.four.current .four_left>.key{
+    width:99px;
+}
+.four.current .four_left>.result{
+    height: 372px;
+}
+/*第五屏*/
+.five {
+    position: relative;
+}
+.five .info_5{
+    width: 1077px;
+    height: 134px;
+    background:url("../images/info_5.png");
+    margin: 30px auto;
+}
+.five .page{
+    width: 1044px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.15);
+    margin: 0 auto;
+    position: relative;
+}
+.five .toolbar{
+    width: 1004px;
+    height: 79px;
+    background:url("../images/toolbar.png");
+    margin: 0 auto;
+    position: relative;
+    opacity: 0;
+}
+.five .border{
+    width: 0px;
+    height: 25px;
+    position: absolute;
+    border: 1px solid rgba(255,255,255,.5);
+    left:90px;
+    top:32px;
+    opacity: 0;
+    transition:width 2s 1s,opacity 1s 1s;
+}
+.five .footer{
+    position: absolute;
+    width: 1044px;
+    height: 40px;
+    border-top:1px solid rgba(255,255,255,.5);
+    left:50%;
+    margin-left:-522px;
+    bottom:0;
+}
+.five .footer .extra{
+    width: 394px;
+    height: 30px;
+    background:url("../images/extra.png");
+    position: absolute;
+    right: 0;
+    top:10px;
+    opacity: 0;
+}
+.five.current .footer>.extra{
+    animation: myOpc 3s 3s forwards;
+}
+@keyframes myOpc {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+.page .left_wire,.page .right_wire{
+    height: 100%;
+    width: 0px;
+    border-left: 1px solid rgba(255,255,255,.5);
+    position: absolute;
+}
+.page .top_wire{
+    position: absolute;
+    width: 1044px;
+    height: 0;
+    border-top:1px solid  rgba(255,255,255,.5);
+    left:1044px;
+    top:0;
+}
+.page .left_wire{
+    top:0px;
+    transition:transform 1s;
+   transform:translateY(-100%);
+}
+.page .right_wire{
+    right: 0px;
+    top:0;
+    transition:transform 1s;
+    transform:translateY(100%);
+}
+/*@的动画*/
+.five.current .toolbar{
+    animation: mytoolbar 2s 2s forwards;
+}
+@keyframes mytoolbar {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.five.current .border{
+    width: 923px;
+    opacity: 1;
+}
+.five.current .page>.top_wire{
+    animation:myTop 1s forwards;
+}
+@keyframes myTop {
+    from{
+        left: 1044px;
+    }
+    to{
+     left:0;
+    }
+}
+
+.five.current .page>.left_wire{
+    transform: none;
+}
+.five.current .page>.right_wire{
+    transform: none;
+}
+
